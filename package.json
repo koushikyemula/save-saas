@@ -5,8 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "clean": "rm -rf node_modules && rm -rf .next && rm pnpm-lock.yaml",
+    "export": "next export",
+    "fmc": "prettier --check \"**/*.{ts,tsx,mdx}\"",
+    "fmw": "prettier --write \"**/*.{ts,tsx,mdx}\"",
+    "lnt": "next lint",
+    "lntf": "next lint --fix",
+    "shadcn:add": "pnpm dlx shadcn-ui@latest add",
     "start": "next start",
-    "lint": "next lint"
+    "tc": "tsc --noEmit"
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.0",
