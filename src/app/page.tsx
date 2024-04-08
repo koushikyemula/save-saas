@@ -1,11 +1,11 @@
-import { GradientButton } from "@/components/gradient-button";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div>
+    <div className="">
       landing page
       <div>
-        <GradientButton>Button</GradientButton>
+        <Button>Button</Button>
       </div>
     </div>
   );

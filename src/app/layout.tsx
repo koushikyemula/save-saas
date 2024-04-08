@@ -6,6 +6,7 @@ import ConvexClientProvider from "./ConvexClientProvider";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
+import TopLoader from "@/components/ui/top-loader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,10 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <ThemeProvider defaultTheme="dark" enableSystem attribute="class">
-          <ConvexClientProvider>{children}</ConvexClientProvider>
-        </ThemeProvider>
+      <body className={(inter.className, "bg-black")}>
+        <TopLoader />
+        <ConvexClientProvider>{children}</ConvexClientProvider>
       </body>
     </html>
   );
