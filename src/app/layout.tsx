@@ -5,6 +5,7 @@ import ConvexClientProvider from "./ConvexClientProvider";
 
 import "./globals.css";
 
+import Header from "@/components/header/header";
 import { Provider } from "@/components/providers";
 import TopLoader from "@/components/ui/top-loader";
 
@@ -29,6 +30,7 @@ export default function RootLayout({
       <body className={(inter.className, "bg-[#F6F6F3] dark:bg-[#0C0C0C]")}>
         <Provider>
           <TopLoader />
+          <Header />
           <ConvexClientProvider>{children}</ConvexClientProvider>
         </Provider>
       </body>

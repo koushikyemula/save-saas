@@ -2,7 +2,7 @@ import NextTopLoader from "nextjs-toploader";
 
 const TopLoader = () => (
   <NextTopLoader
-    color="#a3a3a3"
+    color="#F6F6F3"
     easing="ease"
     speed={200}
     crawlSpeed={200}
