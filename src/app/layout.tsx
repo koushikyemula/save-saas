@@ -5,10 +5,10 @@ import ConvexClientProvider from "./ConvexClientProvider";
 
 import "./globals.css";
 
+import { Providers } from "@/providers";
 import { ClerkProvider } from "@clerk/nextjs";
 
 import Header from "@/components/header/header";
-import { Provider } from "@/components/providers";
 import TopLoader from "@/components/ui/top-loader";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -29,13 +29,13 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body className={(inter.className, "bg-[#F6F6F3] dark:bg-[#0C0C0C]")}>
-          <Provider>
+          <Providers>
             <TopLoader />
             <Header />
             <ConvexClientProvider>{children}</ConvexClientProvider>
-          </Provider>
+          </Providers>
         </body>
       </html>
     </ClerkProvider>
