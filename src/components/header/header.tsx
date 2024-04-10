@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SignInButton, SignUpButton } from "@clerk/nextjs";
 import { FramerLogoIcon } from "@radix-ui/react-icons";
 
@@ -9,8 +10,12 @@ const Header = () => {
       <nav className="flex w-3/5 max-w-6xl items-center justify-between rounded-2xl border border-border bg-[#FDFDFC]/70 p-3 px-4 backdrop-blur-xl dark:bg-[#121212]">
         <div className="flex items-center gap-8">
           <FramerLogoIcon />
-          <p className="text-[#878787] transition-colors delay-100 ease-in hover:text-white">Pricing</p>
-          <p className="text-[#878787] transition-colors delay-100 ease-in hover:text-white">Dashboard</p>
+          <Link href={"/"} className="text-[#878787] transition-colors delay-100 ease-in hover:text-white">
+            Pricing
+          </Link>
+          <Link href={"/"} className="text-[#878787] transition-colors delay-100 ease-in hover:text-white">
+            Dashboard
+          </Link>
         </div>
         <div className="space-x-4">
           <SignInButton>
