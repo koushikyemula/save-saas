@@ -8,13 +8,12 @@ import "./globals.css";
 import { Providers } from "@/providers";
 import { ClerkProvider } from "@clerk/nextjs";
 
-import Header from "@/components/header/header";
 import TopLoader from "@/components/ui/top-loader";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Save Saas",
+  title: "Wault",
   description: "Save literally anything",
 };
 
@@ -33,7 +32,6 @@ export default function RootLayout({
         <body className={(inter.className, "bg-[#F6F6F3] dark:bg-[#0C0C0C]")}>
           <Providers>
             <TopLoader />
-            <Header />
             <ConvexClientProvider>{children}</ConvexClientProvider>
           </Providers>
         </body>
