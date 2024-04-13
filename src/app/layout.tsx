@@ -30,10 +30,12 @@ export default function RootLayout({
     <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
       <html lang="en" suppressHydrationWarning>
         <body className={(inter.className, "bg-[#F6F6F3] dark:bg-[#0C0C0C]")}>
-          <Providers>
-            <TopLoader />
-            <ConvexClientProvider>{children}</ConvexClientProvider>
-          </Providers>
+          <ConvexClientProvider>
+            <Providers>
+              <TopLoader />
+              {children}
+            </Providers>
+          </ConvexClientProvider>
         </body>
       </html>
     </ClerkProvider>
