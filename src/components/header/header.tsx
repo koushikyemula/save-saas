@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SignInButton, SignUpButton } from "@clerk/nextjs";
-import { ChevronRightIcon, FramerLogoIcon } from "@radix-ui/react-icons";
+import { ChevronRightIcon } from "@radix-ui/react-icons";
 
 import { Button } from "../ui/button";
 
