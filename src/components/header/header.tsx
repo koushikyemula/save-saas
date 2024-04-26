@@ -24,7 +24,7 @@ const Header = () => {
         </div>
         <div className="space-x-4">
           <SignInButton>
-            <Button className="rounded-full p-5" variant="ghost">
+            <Button className="rounded-full p-5 font-semibold" variant="ghost">
               Sign In
             </Button>
           </SignInButton>
