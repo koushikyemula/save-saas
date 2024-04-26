@@ -6,8 +6,8 @@ import { Button } from "../ui/button";
 
 const Header = () => {
   return (
-    <header className="sticky top-3 z-50 h-12 justify-center px-2 md:flex md:px-4">
-      <nav className="flex w-full max-w-7xl items-center justify-between rounded-2xl px-5 backdrop-blur-xl">
+    <header className="sticky top-4 z-50 h-12 justify-center px-2 md:flex md:px-4">
+      <nav className="flex w-full max-w-7xl items-center justify-between rounded-full px-5 backdrop-blur-xl">
         <div className="flex items-center gap-8">
           <Link href={"/"}>
             <h1 className="mask-effect hover:mask-effect text-xl font-bold">Wault</h1>
