@@ -10,7 +10,9 @@ export const LandingHero = () => {
         Your minimalistic wault for saving literally anything
       </p>
       <Link href="/">
-        <Button variant="outline" className="h-12 rounded-full border border-primary px-6">
+        <Button
+          variant="outline"
+          className="mask-effect hover:mask-effect h-12 rounded-full border-2 border-primary px-6 text-center font-semibold">
           Get started
         </Button>
       </Link>

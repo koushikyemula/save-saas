@@ -10,7 +10,7 @@ const Header = () => {
       <nav className="flex w-full max-w-7xl items-center justify-between rounded-2xl px-5 backdrop-blur-xl">
         <div className="flex items-center gap-8">
           <Link href={"/"}>
-            <h1 className="text-xl font-bold">Wault</h1>
+            <h1 className="mask-effect hover:mask-effect text-xl font-bold">Wault</h1>
           </Link>
           {/* <Link href={"/"} className="text-[#878787] transition-colors delay-100 ease-in hover:text-white">
             Features
@@ -24,7 +24,7 @@ const Header = () => {
         </div>
         <div className="space-x-4">
           <SignInButton>
-            <Button className="rounded-full p-5 font-semibold" variant="ghost">
+            <Button className="rounded-full p-5 font-semibold shadow" variant="ghost">
               Sign In
             </Button>
           </SignInButton>
