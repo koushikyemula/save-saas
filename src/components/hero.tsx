@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { auth } from "@clerk/nextjs/server";
 
 import { Button } from "./ui/button";
 
 export const LandingHero = () => {
+  const { userId } = auth();
   return (
     <div className="mt-24 flex h-full flex-col items-center justify-center gap-y-6">
       <h2 className="text-clip text-6xl font-extrabold">Save Literally Anything!</h2>
@@ -10,11 +12,19 @@ export const LandingHero = () => {
         Your minimalistic wault for saving literally anything
       </p>
       <Link href="/">
-        <Button
-          variant="outline"
-          className="mask-effect hover:mask-effect h-12 rounded-full border-2 border-primary px-6 text-center font-semibold">
-          Get started
-        </Button>
+        {userId ? (
+          <Button
+            variant="outline"
+            className="mask-effect hover:mask-effect h-12 rounded-full border-2 border-primary px-6 text-center font-semibold">
+            Get started
+          </Button>
+        ) : (
+          <Button
+            variant="outline"
+            className="mask-effect hover:mask-effect h-12 rounded-full border-2 border-primary px-6 text-center font-semibold">
+            Dashboard
+          </Button>
+        )}
       </Link>
     </div>
   );

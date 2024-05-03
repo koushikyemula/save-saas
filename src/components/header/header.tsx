@@ -25,14 +25,13 @@ const Header = () => {
           </Link> */}
         </div>
         <div className="space-x-4">
-          {userId && (
+          {userId ? (
             <Link href={"/dashboard"}>
               <Button className="rounded-full p-5 font-semibold shadow" variant="ghost">
                 Dashboard
               </Button>
             </Link>
-          )}
-          {!userId && (
+          ) : (
             <>
               <SignInButton>
                 <Button className="rounded-full p-5 font-semibold shadow" variant="ghost">
