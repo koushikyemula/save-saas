@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { SignInButton, SignUpButton } from "@clerk/nextjs";
+import { auth, currentUser } from "@clerk/nextjs/server";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 
 import { Button } from "../ui/button";
 
 const Header = () => {
+  const { userId } = auth();
   return (
     <header className="sticky top-4 z-50 h-12 justify-center px-2 md:flex md:px-4">
       <nav className="flex w-full max-w-7xl items-center justify-between rounded-full px-5 backdrop-blur-xl">
@@ -23,16 +25,27 @@ const Header = () => {
           </Link> */}
         </div>
         <div className="space-x-4">
-          <SignInButton>
-            <Button className="rounded-full p-5 font-semibold shadow" variant="ghost">
-              Sign In
-            </Button>
-          </SignInButton>
-          <SignUpButton>
-            <Button className="items-center rounded-full px-4 font-semibold">
-              Get Started <ChevronRightIcon className="ml-1 size-3" />
-            </Button>
-          </SignUpButton>
+          {userId && (
+            <Link href={"/dashboard"}>
+              <Button className="rounded-full p-5 font-semibold shadow" variant="ghost">
+                Dashboard
+              </Button>
+            </Link>
+          )}
+          {!userId && (
+            <>
+              <SignInButton>
+                <Button className="rounded-full p-5 font-semibold shadow" variant="ghost">
+                  Sign In
+                </Button>
+              </SignInButton>
+              <SignUpButton>
+                <Button className="items-center rounded-full px-4 font-semibold">
+                  Get Started <ChevronRightIcon className="ml-1 size-3" />
+                </Button>
+              </SignUpButton>
+            </>
+          )}
         </div>
       </nav>
     </header>
