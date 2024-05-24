@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { auth } from "@clerk/nextjs/server";
 
+import ShimmerButton from "./magicui/shimmer-button";
 import { Button } from "./ui/button";
 
 export const LandingHero = () => {
@@ -13,17 +14,19 @@ export const LandingHero = () => {
       </p>
       <Link href="/">
         {userId ? (
-          <Button
-            variant="outline"
-            className="mask-effect hover:mask-effect h-12 rounded-full border-2 border-primary px-6 text-center font-semibold">
-            Get started
-          </Button>
+          // <Button
+          //   variant="outline"
+          //   className="mask-effect hover:mask-effect h-12 rounded-full border-2 border-primary px-6 text-center font-semibold">
+          //   Get started
+          // </Button>
+          <ShimmerButton>Get started</ShimmerButton>
         ) : (
-          <Button
-            variant="outline"
-            className="mask-effect hover:mask-effect h-12 rounded-full border-2 border-primary px-6 text-center font-semibold">
-            Dashboard
-          </Button>
+          // <Button
+          //   variant="outline"
+          //   className="mask-effect hover:mask-effect h-12 rounded-full border-2 border-primary px-6 text-center font-semibold">
+          //   Dashboard
+          // </Button>
+          <ShimmerButton>Dashboard</ShimmerButton>
         )}
       </Link>
     </div>
