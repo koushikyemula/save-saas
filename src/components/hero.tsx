@@ -21,12 +21,12 @@ export const LandingHero = () => {
           // </Button>
           <ShimmerButton>Get started</ShimmerButton>
         ) : (
-          // <Button
-          //   variant="outline"
-          //   className="mask-effect hover:mask-effect h-12 rounded-full border-2 border-primary px-6 text-center font-semibold">
-          //   Dashboard
-          // </Button>
-          <ShimmerButton>Dashboard</ShimmerButton>
+          <Button
+            variant="outline"
+            className="mask-effect hover:mask-effect h-12 rounded-full border-2 border-primary px-6 text-center font-semibold">
+            Dashboard
+          </Button>
+          // <ShimmerButton className="text-white">Dashboard</ShimmerButton>
         )}
       </Link>
     </div>
