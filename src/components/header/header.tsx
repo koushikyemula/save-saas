@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SignInButton, SignUpButton } from "@clerk/nextjs";
+import { SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
 import { auth, currentUser } from "@clerk/nextjs/server";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 
@@ -26,11 +26,14 @@ const Header = () => {
         </div>
         <div className="space-x-4">
           {userId ? (
-            <Link href={"/dashboard"}>
-              <Button className="rounded-full p-5 font-semibold shadow" variant="ghost">
-                Dashboard
-              </Button>
-            </Link>
+            <>
+              <Link href={"/dashboard"}>
+                <Button className="rounded-full p-5 font-semibold shadow" variant="ghost">
+                  Dashboard
+                </Button>
+              </Link>
+              <UserButton />
+            </>
           ) : (
             <>
               <SignInButton>
